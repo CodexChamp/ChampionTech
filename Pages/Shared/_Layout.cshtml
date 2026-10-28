@@ -1,45 +1,66 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ChampionTech</title>
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="@(ViewData["MetaDescription"] ?? "Freelance software developer building custom web apps, database tools, automation, reports, and internal software for small businesses.")" />
     <script type="importmap"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ChampionTech.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ChampionTech</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+    @{
+        var isHomePage = Context.Request.Path == "/";
+        var servicesHref = isHomePage ? "#services" : "/#services";
+        var workHref = isHomePage ? "#work" : "/#work";
+        var credentialsHref = isHomePage ? "/Credentials" : "/Credentials";
+        var contactHref = isHomePage ? "#contact" : "/#contact";
+    }
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container site-shell">
+                <a class="navbar-brand site-brand" asp-area="" asp-page="/Index">Rylan Champion</a>
+                <button class="navbar-toggler site-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link site-nav-link" href="@servicesHref">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link site-nav-link" href="@workHref">Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link site-nav-link" href="@credentialsHref">Credentials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link site-nav-link" href="@contactHref">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - ChampionTech - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-shell footer-inner">
+            <span class="footer-name">&copy; 2026 Rylan Champion</span>
+            <div class="footer-links">
+                <a href="tel:5093819136">509-381-9136</a>
+                <a href="https://github.com/CodexChamp" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/rylan-champion-a25611303/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
         </div>
     </footer>
 

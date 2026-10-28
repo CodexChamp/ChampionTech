@@ -1,10 +1,267 @@
-﻿@page
+@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Rylan Champion | Freelance Software Developer";
+    ViewData["MetaDescription"] = "Freelance software developer building custom web apps, database tools, automation, reports, and internal software for small businesses.";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<canvas id="fireworks-background" class="fireworks-canvas" aria-hidden="true"></canvas>
+
+<section class="hero-section">
+    <div class="container site-shell">
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Freelance Software Developer based in Idaho</p>
+                <h1>Custom Software Tools for Small Businesses</h1>
+                <p class="hero-lead">
+                    I build practical web apps, database tools, reports, automations, and internal systems that help businesses move beyond messy spreadsheets, outdated software, and manual work.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" type="button" data-email-trigger="hero">Get in Touch</button>
+                    <p class="hero-supporting-text">Helpful software for the work behind the scenes: forms, workflows, reports, uploads, and day-to-day operations.</p>
+                </div>
+            </div>
+            <aside class="hero-panel" aria-label="Typical project focus areas">
+                <div class="hero-panel-card">
+                    <p class="hero-panel-label">Practical project focus</p>
+                    <ul class="hero-points">
+                        <li>Internal web apps and admin tools</li>
+                        <li>SQL-backed workflows and reports</li>
+                        <li>Tablet, photo, scanning, and upload flows</li>
+                        <li>Automation that removes repetitive manual work</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="content-section theme-toolkit-section" aria-labelledby="theme-toolkit-title">
+    <div class="container site-shell">
+        <div class="theme-toolkit">
+            <div class="theme-toolkit-copy">
+                <p class="section-kicker">Style Toolkit</p>
+                <h2 id="theme-toolkit-title">See six different visual styles this site can wear.</h2>
+                <p class="section-text">
+                    The content stays practical and business-focused, but the presentation can shift depending on the kind of impression you want to make.
+                </p>
+            </div>
+            <div class="theme-switcher" role="group" aria-label="Website style options">
+                <button class="theme-option is-active" type="button" data-theme-value="simple">
+                    <span class="theme-option-name">Simple</span>
+                    <span class="theme-option-note">Clean and approachable</span>
+                </button>
+                <button class="theme-option" type="button" data-theme-value="neon">
+                    <span class="theme-option-name">High Tech Neon</span>
+                    <span class="theme-option-note">Sharp, glowing, modern</span>
+                </button>
+                <button class="theme-option" type="button" data-theme-value="homestead">
+                    <span class="theme-option-name">Wood Panel Homesy</span>
+                    <span class="theme-option-note">Warm, grounded, handcrafted</span>
+                </button>
+                <button class="theme-option" type="button" data-theme-value="ledger">
+                    <span class="theme-option-name">Official Professional</span>
+                    <span class="theme-option-note">Notes, tables, and structure</span>
+                </button>
+                <button class="theme-option" type="button" data-theme-value="mosaic">
+                    <span class="theme-option-name">Glassy Mosaic</span>
+                    <span class="theme-option-note">Layered, luminous, premium</span>
+                </button>
+                <button class="theme-option" type="button" data-theme-value="fireworks">
+                    <span class="theme-option-name">Fireworks Night</span>
+                    <span class="theme-option-note">Animated holiday sky</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-muted">
+    <div class="container site-shell narrow-section">
+        <p class="section-kicker">A better fit for small teams</p>
+        <h2>If your business is stuck with spreadsheets, paperwork, or outdated tools, I can help modernize it.</h2>
+        <p class="section-text">
+            Most businesses do not need a giant software platform. They need something modern, custom, and built around the way they actually work. I help turn frustrating manual processes into simpler tools your team will actually want to use.
+        </p>
+    </div>
+</section>
+
+<section class="content-section" id="services">
+    <div class="container site-shell">
+        <div class="section-heading">
+            <p class="section-kicker">Services</p>
+            <h2>What I Can Help With</h2>
+        </div>
+        <div class="card-grid">
+            <button class="info-card service-card is-active" type="button" data-service-key="internal-web-apps" aria-pressed="true">
+                <h3>Internal Web Apps</h3>
+                <p>Build custom dashboards, admin panels, forms, and business tools.</p>
+            </button>
+            <button class="info-card service-card" type="button" data-service-key="database-tools" aria-pressed="false">
+                <h3>Database Tools</h3>
+                <p>Create searchable systems, SQL-backed apps, Azure-based data storage solutions, reports, and data entry workflows.</p>
+            </button>
+            <button class="info-card service-card" type="button" data-service-key="workflow-automation" aria-pressed="false">
+                <h3>Workflow Automation</h3>
+                <p>Reduce repeated manual work, spreadsheet cleanup, and copy-paste processes.</p>
+            </button>
+            <button class="info-card service-card" type="button" data-service-key="tablet-mobile-workflows" aria-pressed="false">
+                <h3>Tablet and Mobile Workflows</h3>
+                <p>Build tools for scanning, uploads, field work, photos, and mobile-friendly tasks.</p>
+            </button>
+            <button class="info-card service-card" type="button" data-service-key="website-fixes" aria-pressed="false">
+                <h3>Website Fixes and Improvements</h3>
+                <p>Fix broken forms, improve pages, clean up layouts, and add useful features.</p>
+            </button>
+            <button class="info-card service-card" type="button" data-service-key="legacy-cleanup" aria-pressed="false">
+                <h3>Legacy System Modernization</h3>
+                <p>Move beyond Access databases, outdated workflows, messy code, and tools that no longer fit the business.</p>
+            </button>
+        </div>
+        <div class="service-detail-card" id="service-detail" aria-live="polite">
+            <div class="service-detail-grid">
+                <div>
+                    <p class="section-kicker">Why It Helps</p>
+                    <h3 id="service-detail-title">Internal Web Apps</h3>
+                    <p class="section-text" id="service-detail-summary">
+                        Custom internal tools give your team one place to handle the work instead of jumping between spreadsheets, email threads, and workarounds.
+                    </p>
+                    <ul class="service-detail-list" id="service-detail-benefits">
+                        <li>Reduce confusion by giving staff one consistent workflow.</li>
+                        <li>Make day-to-day operations faster with forms, dashboards, and shared visibility.</li>
+                        <li>Cut down on mistakes caused by copy-paste steps and scattered files.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="section-kicker">Common Questions</p>
+                    <div class="service-faq-list" id="service-detail-faqs">
+                        <article class="service-faq-item">
+                            <h4>Do we need a huge system for this?</h4>
+                            <p>Usually no. Many small businesses only need a focused tool that matches the way they already work.</p>
+                        </article>
+                        <article class="service-faq-item">
+                            <h4>Will my team actually use it?</h4>
+                            <p>That is the goal. The point is to make work simpler, not add another bloated platform people avoid.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-accent" id="work">
+    <div class="container site-shell">
+        <div class="section-heading">
+            <p class="section-kicker">Past Work</p>
+            <h2>Projects and client work that reflect how I build.</h2>
+            <p class="section-text">
+                Some work can be shown publicly, and some client work needs to stay private. The common thread is building modern, useful software that makes a real business process easier to run.
+            </p>
+        </div>
+        <div class="project-grid">
+            <article class="project-card">
+                <div class="project-card-header">
+                    <h3>Champion Skyes</h3>
+                </div>
+                <p>A live website project for Champion Skyes. This project shows my ability to build and publish a real website for a small business or personal brand.</p>
+                <a class="btn btn-outline-primary" href="https://championskyes.com/" target="_blank" rel="noreferrer">View Site</a>
+            </article>
+            <article class="project-card project-card-muted">
+                <div class="project-card-header">
+                    <h3>Chiropractic Website</h3>
+                    <span class="status-badge">Coming Soon</span>
+                </div>
+                <p>A website project for a chiropractic business with a warm, polished, woodsy visual style. This project is currently being built and will be added once it is finished.</p>
+            </article>
+            <article class="project-card">
+                <div class="project-card-header">
+                    <h3>Internal Dealership Operations App</h3>
+                    <span class="status-badge status-badge-secondary">Private Client Work</span>
+                </div>
+                <p>A private business software project involving internal web tools, tablet workflows, VIN lookup, file uploads, quality control checks, reporting, SQL-backed data, Azure-based data storage solutions, and workflow improvements. This project is not public, but it reflects the kind of modern business software I build and improve.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container site-shell two-column-section">
+        <div class="section-heading">
+            <p class="section-kicker">Practical software experience</p>
+            <h2>The Kind of Work I Do</h2>
+        </div>
+        <div>
+            <p class="section-text">
+                I have worked on business software involving vehicle data, VIN scanning, tablet workflows, file uploads, quality control checks, reporting, SQL databases, and internal web tools. I enjoy projects where the goal is not just to make something look nicer, but to make the process more modern, more reliable, and easier to run.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-muted">
+    <div class="container site-shell about-why-grid">
+        <article class="about-card about-card-no-photo" aria-labelledby="about-rylan-title">
+            <div class="about-copy">
+                <p class="section-kicker">About Rylan</p>
+                <h2 id="about-rylan-title">Practical software with a modern mindset.</h2>
+                <p class="section-text">
+                    I'm a freelance software developer based in Idaho. I build practical tools for businesses that need help with internal apps, databases, automation, reports, mobile/tablet workflows, and messy processes that are ready for a more modern way of working.
+                </p>
+            </div>
+        </article>
+        <div class="two-column-section why-section">
+            <div class="section-heading">
+                <p class="section-kicker">Why clients reach out</p>
+                <h2>Why Work With Me</h2>
+            </div>
+            <ul class="benefit-list">
+                <li>I focus on practical software that solves real business problems.</li>
+                <li>I can work with messy requirements and help turn them into a usable tool.</li>
+                <li>I understand that businesses need useful solutions, not overcomplicated systems.</li>
+                <li>I bring a modern, forward-looking approach instead of pushing outdated tools and workarounds.</li>
+                <li>I communicate clearly and keep the work grounded in what the business actually needs.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="content-section contact-section" id="contact">
+    <div class="container site-shell">
+        <div class="contact-card">
+            <div>
+                <p class="section-kicker">Contact</p>
+                <h2>Have a process you wish was easier?</h2>
+                <p class="section-text">
+                    If your business has a repetitive task, a messy spreadsheet, an outdated tool, or a workflow that wastes time, I would be happy to talk through a cleaner, more modern way to handle it.
+                </p>
+                <a class="contact-link" href="mailto:rylanchamp12@gmail.com">rylanchamp12@gmail.com</a>
+            </div>
+            <div class="contact-actions">
+                <button class="btn btn-primary btn-lg" type="button" data-email-trigger="contact">Email Me</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="email-choice-backdrop" id="email-choice-backdrop" hidden></div>
+<div class="email-choice-modal" id="email-choice-modal" role="dialog" aria-modal="true" aria-labelledby="email-choice-title" hidden>
+    <button class="email-choice-close" type="button" id="email-choice-close" aria-label="Close contact options">×</button>
+    <p class="section-kicker">Contact Options</p>
+    <h2 id="email-choice-title">How would you like to send your message?</h2>
+    <p class="section-text">Choose Gmail, Outlook, or your default email app.</p>
+    <div class="email-choice-actions">
+        <a class="email-choice-option" href="https://mail.google.com/mail/?view=cm&fs=1&to=rylanchamp12@gmail.com" target="_blank" rel="noreferrer">
+            <span class="email-choice-name">Use Gmail</span>
+            <span class="email-choice-note">Open a new Gmail compose window</span>
+        </a>
+        <a class="email-choice-option" href="https://outlook.office.com/mail/deeplink/compose?to=rylanchamp12@gmail.com" target="_blank" rel="noreferrer">
+            <span class="email-choice-name">Use Outlook</span>
+            <span class="email-choice-note">Open a new Outlook compose window</span>
+        </a>
+        <a class="email-choice-option" href="mailto:rylanchamp12@gmail.com">
+            <span class="email-choice-name">Use Default Email App</span>
+            <span class="email-choice-note">Open the email app already set on this device</span>
+        </a>
+    </div>
 </div>
